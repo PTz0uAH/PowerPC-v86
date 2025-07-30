@@ -260,7 +260,7 @@ export function FloppyController(cpu, fda_image, fdb_image, fdc_config)
 
     this.drives = [
         new FloppyDrive(this, "fda", fdc_config?.fda, fda_image, CMOS_FDD_TYPE_1440),
-        new FloppyDrive(this, "fdb", fdc_config?.fdb, fdb_image, CMOS_FDD_TYPE_NO_DRIVE)     // PSL: change this to NO_DRIVE
+        new FloppyDrive(this, "fdb", fdc_config?.fdb, fdb_image, CMOS_FDD_TYPE_1440)     // PSL: change this to NO_DRIVE does not work
     ];
 
     Object.seal(this);
@@ -426,7 +426,7 @@ FloppyController.prototype.reset_fdc = function()
     dbg_log("resetting controller", LOG_FLOPPY);
     this.lower_irq("controller reset");
 
-    this.sra = 0;   // NOTE: set SRA to SRA_NDRV2 if fdb does not exist
+    this.sra = 0; //SRA_NDRV2;   // NOTE: set SRA to SRA_NDRV2 if fdb does not exist
     this.srb = SRB_RESET;
     this.dor = DOR_NRESET | DOR_DMAEN;
     this.msr = MSR_RQM;

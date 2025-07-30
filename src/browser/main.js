@@ -160,7 +160,7 @@ function onload()
 
     // Abandonware OS images are from https://winworldpc.com/library/operating-systems
     const oses = [
-        {
+/*        {
             id: "archlinux",
             name: "Arch Linux",
             memory_size: 512 * 1024 * 1024,
@@ -326,7 +326,7 @@ function onload()
                 use_parts: true,
             },
             name: "BeOS 5",
-        },
+        },*/
         {
             id: "msdos",
             hda: {
@@ -354,7 +354,7 @@ function onload()
             },
             name: "FreeDOS",
         },
-        {
+        /*{
             id: "freegem",
             hda: {
                 url: host + "freegem/.bin",
@@ -438,7 +438,7 @@ function onload()
                 async: false,
             },
             name: "Linux",
-        },
+        },*/
         {
             id: "linux4",
             cdrom: {
@@ -471,7 +471,7 @@ function onload()
             filesystem: {},
             cmdline: "tsc=reliable mitigations=off random.trust_cpu=on",
         },
-        {
+        /*{
             id: "basiclinux",
             hda: {
                 url: host + "bl3-5.img",
@@ -861,6 +861,90 @@ function onload()
                 use_parts: true,
             },
             name: "Windows NT 3.1",
+        },*/
+        {
+            id: "dsl",
+            memory_size: 256 * 1024 * 1024,
+            cdrom: {
+                url: host + "dsl-4.11.rc2.iso",
+                size: 52824064,
+                async: false,
+            },
+            name: "Damn Small Linux",
+            homepage: "http://www.damnsmalllinux.org/",
+        },
+        {
+            id: "commodore",
+            memory_size: 2 * 1024 * 1024,
+            vga_memory_size: 1 * 1024 * 1024,
+            hda: {
+                url: host + "v86_commodore.img",
+                async: false,
+                size: 10485760,
+            },
+            name: "Commodore DOS 3.3",
+            homepage: "http://localhost/commodore.html",
+        },
+        {
+            id: "amigoxpe",
+            memory_size: 2048 * 1024 * 1024,
+            vga_memory_size: 256 * 1024 * 1024,
+            cdrom: {
+                url: host + "v86_amigoxpe.iso",
+                size: 290084864,
+                async: false,
+            },
+            name: "AmiGoXPE",
+            homepage: "http://localhost/amigoxpe.html",
+        },
+        {
+            id: "bartpe",
+            memory_size: 2048 * 1024 * 1024,
+            vga_memory_size: 256 * 1024 * 1024,
+            cdrom: {
+                url: host + "v86_bartpe.iso",
+                size: 290084864,
+                async: false,
+            },
+            name: "BartPE",
+            homepage: "http://localhost/bartpe.html",
+        },
+        {
+            id: "win2k3",
+            memory_size: 2048 * 1024 * 1024,
+            vga_memory_size: 256 * 1024 * 1024,
+            hda: {
+                url: host + "v86_win2k3_full_eng.img",
+                async: false,
+                size: 2145386496,
+            },
+            name: "Win2K3",
+            homepage: "http://localhost/win2k3.html",
+        },
+        {
+            id: "win98se",
+            memory_size: 512 * 1024 * 1024,
+            vga_memory_size: 128 * 1024 * 1024,
+            hda: {
+                url: host + "v86_win98se_full_dutch.img",
+                async: false,
+                size: 536870912,
+            },
+            name: "Win98SE",
+            homepage: "http://localhost/win98se.html",
+        },
+        {
+            id: "win98se_eng",
+            memory_size: 512 * 1024 * 1024,
+            vga_memory_size: 128 * 1024 * 1024,
+            acpi: true,
+            hda: {
+                url: host + "v86_win98se_full_eng.img",
+                async: false,
+                size: 536870912,
+            },
+            name: "Win98SE",
+            homepage: "http://localhost/win98se_eng.html",
         },
         {
             id: "windows98",
@@ -888,7 +972,7 @@ function onload()
             },
             name: "Windows 98",
         },
-        {
+/*        {
             id: "windows95",
             memory_size: 64 * 1024 * 1024,
             // old image:
@@ -973,7 +1057,7 @@ function onload()
             },
             name: "Sanos",
             homepage: "http://www.jbox.dk/sanos/",
-        },
+        },*/
         {
             id: "freebsd",
             memory_size: 256 * 1024 * 1024,
@@ -1030,7 +1114,7 @@ function onload()
             acpi: true,
             homepage: "https://reactos.org/",
         },
-        {
+        /*{
             id: "skift",
             cdrom: {
                 url: host + "skift-20200910.iso",
@@ -1048,7 +1132,7 @@ function onload()
             },
             name: "Snowdrop",
             homepage: "http://www.sebastianmihai.com/snowdrop/",
-        },
+        },*/
         {
             id: "openwrt",
             hda: {
@@ -1066,7 +1150,7 @@ function onload()
             },
             name: "QNX 4.05",
         },
-        {
+        /*{
             id: "9front",
             memory_size: 128 * 1024 * 1024,
             hda: {
@@ -1348,7 +1432,7 @@ function onload()
                 async: false,
             },
             homepage: "https://newos.org/",
-        },
+        },*/
         {
             id: "aros-broadway",
             name: "AROS Broadway",
@@ -1389,7 +1473,7 @@ function onload()
             },
             homepage: "https://www.tinyaros.it/",
         },
-        {
+/*        {
             id: "dancy",
             name: "Dancy",
             cdrom: {
@@ -1463,7 +1547,7 @@ function onload()
             },
             memory_size: 512 * 1024 * 1024,
             homepage: "https://archive.org/details/brightv4000"
-        },
+        },*/
     ];
 
     if(DEBUG)
